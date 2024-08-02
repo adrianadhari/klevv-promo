@@ -12,13 +12,12 @@
 <body>
     {{-- Nav --}}
     <nav class="bg-gray-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto  max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
-
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                     <div class="flex flex-shrink-0 items-center">
-                        <img alt="Your Company" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                            class="h-8 w-auto" />
+                        <a href="https://www.klevv.com/" target="_blank"><img alt="Klevv" src="/klevv_logo.png"
+                                class="h-16 w-auto" /></a>
                     </div>
                 </div>
             </div>
@@ -27,20 +26,14 @@
     {{-- Nav --}}
 
     {{-- Hero --}}
-    <div class="relative overflow-hidden bg-gray-900">
-        <div class="relative px-6 pt-16 pb-24 text-center">
-            <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-                KLEVV x Cahaya
-            </h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">
-                Q3 Back to school and Independence day doorprize 2024 </p>
-            <img src="/hero.jpg" alt="Prize" class="my-7 mx-auto w-2/4">
-        </div>
+    <div>
+        <img src="/hero-desktop.jpg" alt="Prize" class="sm:block hidden w-full bg-cover bg-no-repeat">
+        <img src="/hero-mobile.jpg" alt="Prize" class="block sm:hidden w-full bg-cover bg-no-repeat">
     </div>
     {{-- Hero --}}
 
     {{-- Form --}}
-    <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div class="isolate bg-white px-6 py-16 lg:px-8">
 
         <div class="mx-auto max-w-2xl text-center">
             @if (session()->has('success'))

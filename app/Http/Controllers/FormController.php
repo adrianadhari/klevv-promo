@@ -41,9 +41,8 @@ class FormController extends Controller
     public function viewData()
     {
         $datas = Form::all();
-        return view('data', [
-            'datas' => $datas
-        ]);
+        $totalData = $datas->count();
+        return view('data', compact('datas', 'totalData'));
     }
 
     public function getInvoice($filename)
