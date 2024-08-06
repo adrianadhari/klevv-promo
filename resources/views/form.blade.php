@@ -4,31 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/klevv_logo.png">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Klevv Indonesia</title>
+    <title>KLEVV PROMO</title>
+    <script>
+        // JavaScript code for scrolling title
+        let title = 'KLEVV PROMO - ';
+        let index = 0;
+
+        function scrollTitle() {
+            document.title = title.substring(index) + title.substring(0, index);
+            index++;
+            if (index >= title.length) {
+                index = 0;
+            }
+        }
+
+        setInterval(scrollTitle, 200);
+    </script>
 </head>
 
 <body>
-    {{-- Nav --}}
-    <nav class="bg-gray-800">
-        <div class="mx-auto  max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex flex-shrink-0 items-center">
-                        <a href="https://www.klevv.com/" target="_blank"><img alt="Klevv" src="/klevv_logo.png"
-                                class="h-16 w-auto" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    {{-- Nav --}}
-
     {{-- Hero --}}
-    <div>
-        <img src="/hero-desktop.jpg" alt="Prize" class="sm:block hidden w-full bg-cover bg-no-repeat">
-        <img src="/hero-mobile.jpg" alt="Prize" class="block sm:hidden w-full bg-cover bg-no-repeat">
+    <div class="min-h-screen w-full">
+        <img src="/hero-desktop.png" alt="Prize" class="sm:block hidden w-full bg-cover bg-no-repeat">
+        <img src="/hero-mobile.png" alt="Prize" class="block sm:hidden w-full bg-cover bg-no-repeat">
     </div>
     {{-- Hero --}}
 
@@ -57,7 +58,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="name" name="name" type="text" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your name" />
                     </div>
                 </div>
 
@@ -68,10 +70,8 @@
                     <div class="mt-2.5">
                         <select id="gender" name="gender" required
                             class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                            <option value="">Select gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                            <option value="Other">Other</option>
                         </select>
                     </div>
                 </div>
@@ -82,7 +82,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="placeOfBirth" name="placeOfBirth" type="text" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your place of birth" />
                     </div>
                 </div>
 
@@ -92,7 +93,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="city" name="city" type="text" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your city" />
                     </div>
                 </div>
 
@@ -102,7 +104,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="idCardNumber" name="idCardNumber" type="number" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your ID card number" />
                     </div>
                 </div>
 
@@ -112,7 +115,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="headline" name="headline" type="text" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter a headline" />
                     </div>
                 </div>
 
@@ -122,7 +126,8 @@
                     </label>
                     <div class="mt-2.5">
                         <input id="phone" name="phone" type="number" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your phone number" />
                     </div>
                 </div>
 
@@ -132,7 +137,8 @@
                     </label>
                     <div class="mt-2.5">
                         <textarea id="address" name="address" rows="4" required
-                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            placeholder="Enter your address"></textarea>
                     </div>
                 </div>
 
@@ -161,7 +167,6 @@
 
         </form>
     </div>
-
 </body>
 
 </html>

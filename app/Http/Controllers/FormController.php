@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Form;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FormController extends Controller
 {
@@ -54,5 +55,21 @@ class FormController extends Controller
         }
 
         return response()->file($path);
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+
+            return redirect("/viewdata")->with('success', 'Login success');
+        }
+        return back()->with('error', 'Email atau Password salah');
     }
 }
